@@ -2,7 +2,7 @@
 const App = () => {
   return (
     <div className="Ram">
-      <h1>Jai Shree Ram</h1>
+      <h1>Jai  Bhole</h1>
     </div>
   )
 }
