@@ -1,18 +1,80 @@
 * {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
 body {
   width: 100%;
-  height: 100vh;
 }
-.Ram {
-  height: 100vh;
-  display: flex;
-  color: orange !important;
-  justify-content: center;
-  align-items: center;
-  font-size: 5em;
+
+/* src/components/Home.css */
+.home-container {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  min-height: 100vh;
+  color: white;
+}
+
+.home-header {
+  margin-bottom: 20px;
+}
+
+.home-header h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.home-header p {
+  font-size: 1.2em;
+}
+
+.home-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.home-nav li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.home-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s;
+}
+
+.home-nav a:hover {
+  color: #ff7e5f;
+}
+
+
+
+.policy-container {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  line-height: 1.6;
+  font-family: 'Arial', sans-serif;
+}
+
+.policy-container h1 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #333;
+}
+
+.policy-container ol {
+  margin-left: 20px;
+  padding-left: 0;
+}
+
+.policy-container ol li {
+  margin-bottom: 10px;
+  color: #555;
 }
