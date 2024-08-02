@@ -2,7 +2,7 @@ import express, { Express, Request, Response } from "express";
 import morgan from "morgan";
 import cors from "cors";
 import rootRouter from "./routes/index.route";
-import "./helpers/passport-jwt.helper"
+import "./helpers/passport-jwt.helper";
 import cookieParser from "cookie-parser";
 import passport from "passport";
 import { FRONTEND_URL } from "./secret";
@@ -10,7 +10,7 @@ import { FRONTEND_URL } from "./secret";
 const app: Express = express();
 app.use(
   cors({
-    origin: FRONTEND_URL,
+    origin: [FRONTEND_URL, "http://www.adityasinghrawat.com"],
     credentials: true,
     optionsSuccessStatus: 200,
   })
