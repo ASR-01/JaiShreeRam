@@ -4,77 +4,77 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const authApi = createApi({
   reducerPath: "authApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:8080/api/v1" }),
+  baseQuery: fetchBaseQuery({
+    baseUrl: "http://api.adityasinghrawat.com/api/v1",
+  }),
   endpoints: (builder) => ({
     registerUser: builder.mutation({
       query: (user) => {
         return {
           url: "/register",
           method: "POST",
-          body:user,
+          body: user,
           headers: {
-           'Content-type':'application/json'
+            "Content-type": "application/json",
           },
         };
       },
     }),
 
     VerifyUser: builder.mutation({
-     query: (user) => {
-       return {
-         url: "/verify",
-         method: "POST",
-         body:user,
-         headers: {
-          'Content-type':'application/json'
-         },
-       };
-     },
-   }),
+      query: (user) => {
+        return {
+          url: "/verify",
+          method: "POST",
+          body: user,
+          headers: {
+            "Content-type": "application/json",
+          },
+        };
+      },
+    }),
 
-   loginUser: builder.mutation({
-    query: (user) => {
-      return {
-        url: "/login",
-        method: "POST",
-        body:user,
-        headers: {
-         'Content-type':'application/json'
-        },
-        credentials:"include"
-      };
-    },
+    loginUser: builder.mutation({
+      query: (user) => {
+        return {
+          url: "/login",
+          method: "POST",
+          body: user,
+          headers: {
+            "Content-type": "application/json",
+          },
+          credentials: "include",
+        };
+      },
+    }),
 
+    Profile: builder.query({
+      query: () => {
+        return {
+          url: "/profile",
+          method: "GET",
+          credentials: "include",
+        };
+      },
+    }),
 
-    
-  }),
-
-  Profile: builder.query({
-    query: () => {
-      return {
-        url: "/profile",
-        method: "GET",
-        credentials:"include"
-      };
-    },
-
-
-    
-  }),
-
-
-  logout: builder.mutation({
-    query: () => {
-      return {
-        url: "/logout",
-        body:{},
-        method: "POST",
-        credentials:"include"
-      };
-    },
-
-  }),
+    logout: builder.mutation({
+      query: () => {
+        return {
+          url: "/logout",
+          body: {},
+          method: "POST",
+          credentials: "include",
+        };
+      },
+    }),
   }),
 });
 
-export const { useRegisterUserMutation,useVerifyUserMutation,useLoginUserMutation,useProfileQuery ,useLogoutMutation} = authApi;
+export const {
+  useRegisterUserMutation,
+  useVerifyUserMutation,
+  useLoginUserMutation,
+  useProfileQuery,
+  useLogoutMutation,
+} = authApi;
