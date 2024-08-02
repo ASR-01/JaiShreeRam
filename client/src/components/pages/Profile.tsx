@@ -3,7 +3,7 @@ import React from 'react';
 import { useProfileQuery } from '../../services/authApi';
 
 const Profile: React.FC = () => {
-  const { data, error, isLoading } = useProfileQuery();
+  const { data, error, isLoading } = useProfileQuery({});
   console.log(data);
   console.log("Error:", error);
 
