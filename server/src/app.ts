@@ -10,7 +10,7 @@ import { FRONTEND_URL } from "./secret";
 const app: Express = express();
 app.use(
   cors({
-    origin: [FRONTEND_URL, "http://www.adityasinghrawat.com"],
+    origin: FRONTEND_URL,
     credentials: true,
     optionsSuccessStatus: 200,
   })

@@ -13,7 +13,7 @@ const passport_1 = __importDefault(require("passport"));
 const secret_1 = require("./secret");
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)({
-    origin: [secret_1.FRONTEND_URL, "http://www.adityasinghrawat.com"],
+    origin: secret_1.FRONTEND_URL,
     credentials: true,
     optionsSuccessStatus: 200,
 }));
