@@ -4,7 +4,7 @@ import express, { Express, Response, Request } from "express";
 import indexRouter from "./routes/index.routes";
 
 const corsOptions = {
-  origin: 'http://localhost:5173',
+  origin: ["http://adityasinghrawat.com/","http://www.adityasinghrawat.com/"],
   credentials: true, 
 }
 
