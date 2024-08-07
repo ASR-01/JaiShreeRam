@@ -20,7 +20,7 @@ function Register({onLogin}:RegisterProps) {
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
     try {
       const res = await axios.post(
-        "http://api.adityasinghrawat.com/api/v1/auth/register",
+        "http://localhost:7777/api/v1/auth/register",
         data,
         {
           withCredentials: true,

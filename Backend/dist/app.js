@@ -8,7 +8,7 @@ const cors_1 = __importDefault(require("cors"));
 const express_1 = __importDefault(require("express"));
 const index_routes_1 = __importDefault(require("./routes/index.routes"));
 const corsOptions = {
-    origin: 'http://localhost:5173',
+    origin: ["http://192.168.1.7:4173", "http://172.29.112.1:4173", "http://localhost:4173"],
     credentials: true,
 };
 const app = (0, express_1.default)();

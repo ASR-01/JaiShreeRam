@@ -2,7 +2,6 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import Cookies from "js-cookie";
 type FormValues = {
   password: string;
   email: string;
@@ -20,7 +19,7 @@ function Register({ onLogin }:RegisterProps) {
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
     try {
       const res = await axios.post(
-        "http://api.adityasinghrawat.com/api/v1/auth/login",
+        "http://localhost:7777/api/v1/auth/login",
         data,
         {
           withCredentials: true,
@@ -28,8 +27,6 @@ function Register({ onLogin }:RegisterProps) {
       );
 
       if (res.data.success === true) {
-        const token = res.data.data.refreshToken;
-        Cookies.set("re", token, { path: "/" });
         toast.success("Login Successfully");
         onLogin()
         Navigate("/profile");
