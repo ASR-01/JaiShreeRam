@@ -5,6 +5,7 @@ import indexRouter from "./routes/index.routes";
 
 const corsOptions = {
   origin: ["http://adityasinghrawat.com", "http://www.adityasinghrawat.com"],
+  methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
 };
 
