@@ -5,8 +5,9 @@ import indexRouter from "./routes/index.routes";
 
 const corsOptions = {
   origin: ["http://adityasinghrawat.com", "http://www.adityasinghrawat.com"],
-  credentials: true, 
-} 
+  credentials: true,
+};
+
 const app: Express = express();
 app.use(express.json());
 app.use(cors(corsOptions));
